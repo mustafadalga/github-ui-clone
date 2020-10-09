@@ -101,6 +101,10 @@ section {
   padding: 5rem 0;
 }
 
+.ff-inter {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
 /* End Global */
 /*Header */
 header {
@@ -364,7 +368,6 @@ nav {
   color: var(--white);
   font-size: 6.4rem;
   font-weight: 500;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   display: block;
   margin-bottom: 1rem;
   line-height: 1;
@@ -477,7 +480,6 @@ main {
 .enterprise-title h2 {
   color: var(--dark-blue);
   font-size: 3.2rem;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-weight: 500;
   margin-bottom: 1.6rem;
   line-height: 4rem;
@@ -501,7 +503,6 @@ main {
   color: var(--dark-blue);
   font-size: 1.6rem;
   font-weight: 500;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 .enterprise-item p {
   color: var(--gray-2);
@@ -594,12 +595,46 @@ main {
   border-radius: 0.6rem;
   padding: 1.6rem 2.4rem;
   font-size: 1.6rem;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-weight: 500;
   text-align: center;
   width: 60%;
 }
 
 /* End Github For Team */
+/*  Organizations */
+.organizations-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.organizations-title {
+  text-align: center;
+  color: var(--pale-sky);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.organizations-list {
+  max-width: 100rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.organization-item {
+  padding: 2rem 4rem;
+  display: flex;
+}
+
+.organization-logo {
+  max-height: 2.5rem;
+  width: initial;
+  color: var(--dark-blue);
+  filter: grayscale(100%);
+}
+
+/* End Organizations */
 
 /*# sourceMappingURL=main.css.map */
