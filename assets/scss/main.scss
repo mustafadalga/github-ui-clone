@@ -1,3 +1,4 @@
+/* Global*/
 *,*:before,*:after{
   margin: 0;
   padding: 0;
@@ -13,6 +14,8 @@
   --gray-2:#586069;
   --outer-space:rgb(43,49,55);
   --athens-gray:rgb(225, 228, 232);
+  --athens-gray-2:#FAFBFC;
+  --athens-gray-3:#e1e4e8 ;
   --pink:#ffc0cb;
   --red:#ff0000;
   --yellow:#ffff00;
@@ -52,6 +55,8 @@
   --aqua-haze:#f6f8fa;
   --pale-sky:#6A737D;
   --iron:#D1D5DA;
+  --chateau-green:#2ebc4f;
+  --eucalyptus:#28a745;
 
 }
 html{
@@ -59,15 +64,15 @@ html{
 }
 body{
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-  line-height: 2.4;
+  line-height: 1.5;
   color: var(--dark-blue);
   background-color: var(--white);
-  background-color:var(--outer-space);
 }
 ul{
   list-style: none;
 }
 a{
+  color:var(--science-blue);
   text-decoration: none;
   cursor: pointer;
 }
@@ -81,9 +86,19 @@ img{
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+
+section {
+  padding: 5rem 0;
+}
+/* End Global */
+
+
+
+/*Header */
 header{
   height: 7.2rem;
   padding:.8rem 0;
+  background-color: transparent;
 }
 nav{
   display: flex;
@@ -96,6 +111,7 @@ nav{
 .nav-form{
   flex: 1 1 auto;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
 }
 .nav-logo{
@@ -113,6 +129,7 @@ nav{
   position: relative;
   transition: .5s;
   &:hover .nav-dropdown-menu{
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -125,6 +142,7 @@ nav{
   }
 }
 .nav-dropdown-menu{
+  visibility: hidden;
   opacity: 0;
   transition:opacity .3s ease-in-out;
   background: var(--white);
@@ -257,6 +275,10 @@ nav{
   font-size: 1.6rem;
   transition: opacity .4s;
   margin: 0 1.6rem;
+  &:hover{
+    opacity: .75;
+  }
+
 }
 .btn-register{
   color: var(--white);
@@ -265,8 +287,126 @@ nav{
   border:1px solid var(--iron);
   padding: .4rem .8rem;
   transition: opacity .4s;
-  line-height: 0;
+  &:hover{
+    opacity: .75;
+  }
+}
+/* End Header */
+
+
+
+
+/* Hero*/
+.hero{
+  background-image: url("https://github.githubassets.com/images/modules/site/heroes/simple-codelines.svg");
+  background-position-x: center;
+  background-position-y: 10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color:var(--outer-space);
+  height: calc(100vh - 3.6rem);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.hero-content{
   display: flex;
-  align-items: center;
+  width: 110rem;
+  max-width: 100%;
+  height: 100%;
+  margin: 1rem auto 0;
 
 }
+.hero-text-wrap{
+  flex-basis: 55%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-text{
+  width: 75%;
+}
+.hero-title{
+  color: var(--white);
+  font-size: 6.4rem;
+  font-weight: 500;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  display: block;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+.hero-description{
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255,255,255,.6);
+  a{
+    color: var(--white);
+  }
+}
+.hero-form{
+  flex-basis: 40%;
+}
+.sign-up-form{
+  background-color: var(--athens-gray-2);
+  padding: 2rem;
+  border-radius: .6rem;
+  box-shadow: 0px 0px 1px 1px #1B1F23;
+}
+.form-group{
+  margin-bottom: 1.6rem;
+  label{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+    display: block;
+    margin-bottom: .5rem;
+  }
+  input{
+    border:1px solid var(--athens-gray-3);
+    border-radius: .5rem;
+    background-color: transparent;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--dark-blue);
+    outline: none;
+    box-shadow: inset 0 1px 0 rgba(225,228,232,.2);
+    padding: 1rem;
+    width: 100%;
+    &:focus{
+      border-color:var(--science-blue);
+      box-shadow: 0 0 0 3px rgba(3,102,214,.3);
+    }
+
+  }
+}
+.form-description{
+  font-size: 1.2rem;
+  color: var(--dark-blue);
+}
+.btn-sign-up{
+  margin: 1.6rem 0 3.2rem;
+  background-color:var(--chateau-green);
+  border-color:var(--chateau-green);
+  padding: 2rem 3.2rem;
+  border-radius: .6rem;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 1.6rem;
+  display: block;
+  text-align: center;
+  &:hover{
+    background-color: var(--eucalyptus);
+    border-color:var(--eucalyptus);
+  }
+}
+.footer-description{
+
+  color: var(--pale-sky);
+  font-size: 1.2rem;
+}
+/* End Hero*/
