@@ -97,7 +97,33 @@ section {
 .ff-inter{
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
 }
+@mixin arrowAnimation{
+  &:hover .fa-long-arrow-alt-right{
+    padding-left: .5rem;
+  }
+}
+
+.btn-outline-blue{
+  border-radius: .6rem;
+  transition: .2s;
+  padding: 1.6rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 2.5rem;
+  border:1px solid rgba(16,116,231,.5);
+  @include arrowAnimation();
+  i{
+    font-size: .9rem;
+    width: 2rem;
+    transition: all .3s ease-in-out;
+  }
+  &:hover{
+    color:var(--science-blue);
+    border-color:var(--azure-radiance);
+  }
+}
 /* End Global */
+
 
 
 
@@ -488,14 +514,16 @@ main{
     font-size: 1.4rem;
     font-weight: 500;
     margin-top: 2.5rem;
+
   }
 }
 .btn-free-trial{
   background-color: var(--azure-radiance);
   color: var(--white);
-}
-.btn-contact-sales{
-  border:1px solid var(--azure-radiance)
+  &:hover{
+    background-color: var(--science-blue);
+    border-color:var(--science-blue);
+  }
 }
 /* End Github Enterprise */
 
@@ -602,3 +630,31 @@ background-color: var(--congress-blue);
 }
 /* End Organizations */
 
+/* Github Team Signup */
+.teams-content{
+  max-width: 80rem;
+  padding: 0 2rem;
+  margin:0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  .sm-description{
+    color: var(--gray-2);
+    font-size: 1.6rem;
+  }
+  .title{
+    color: var(--dark-blue);
+    font-size: 4.8rem;
+    font-weight: 500;
+  }
+  .description{
+    color: var(--gray-2);
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+.btn-teams-sign-up{
+font-size: 1.6rem;
+  display: inline-block;
+}
+/* End Github Team Signup */
