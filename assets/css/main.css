@@ -12,6 +12,7 @@
   --blue:#0000ff;
   --science-blue:#0366D6;
   --azure-radiance:#1074e7;
+  --congress-blue:#044289;
   --gray:#808080;
   --gray-2:#586069;
   --outer-space:rgb(43,49,55);
@@ -59,6 +60,7 @@
   --iron:#D1D5DA;
   --chateau-green:#2ebc4f;
   --eucalyptus:#28a745;
+  --forest-green:#22863a;
   --bs-lg: 0 8px 24px rgba(149,157,165,.2);
 }
 
@@ -92,7 +94,7 @@ img {
   width: 100%;
   max-width: 128rem;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 4rem;
 }
 
 section {
@@ -109,6 +111,9 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+}
+header .container {
+  padding: 0 2rem;
 }
 
 nav {
@@ -521,5 +526,80 @@ main {
 }
 
 /* End Github Enterprise */
+/* Github For Team */
+.github-for-teams {
+  margin-top: 6rem;
+}
+
+.for-teams-content {
+  background-color: var(--congress-blue);
+  border-radius: 0.6rem;
+  box-shadow: var(--bs-lg);
+  padding: 3.6rem;
+  position: relative;
+  display: flex;
+  z-index: 1;
+}
+.for-teams-content:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("https://github.githubassets.com/images/modules/site/patterns/contribution-graph.svg");
+  background-size: 80% auto;
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+.for-teams-content .warning {
+  flex: 0 0 4.5rem;
+  padding-top: 1rem;
+}
+.for-teams-content .description {
+  flex-basis: 60%;
+  padding-left: 2rem;
+  color: var(--white);
+}
+.for-teams-content .description h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.for-teams-content .description p {
+  font-size: 1.6rem;
+}
+
+.new-warning {
+  border: 1px solid var(--eucalyptus);
+  color: var(--forest-green);
+  border-radius: 10rem;
+  text-align: center;
+  padding: 0 7px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.try-github-free {
+  flex-basis: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-try-github-free {
+  display: inline-block;
+  background-color: var(--azure-radiance);
+  color: var(--white);
+  border-radius: 0.6rem;
+  padding: 1.6rem 2.4rem;
+  font-size: 1.6rem;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-weight: 500;
+  text-align: center;
+  width: 60%;
+}
+
+/* End Github For Team */
 
 /*# sourceMappingURL=main.css.map */
