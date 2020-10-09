@@ -688,5 +688,78 @@ main {
 }
 
 /* End Github Team Signup */
+/* Features */
+.features-content {
+  display: flex;
+}
+
+.features-head-img {
+  flex: 10;
+  padding-right: 5rem;
+  position: relative;
+}
+
+.features-list {
+  flex: 7;
+}
+
+.features-item-img {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  width: 25%;
+}
+.features-item-img img {
+  display: none;
+}
+.features-item-img .active {
+  display: block;
+}
+
+.features-item {
+  padding: 2.4rem;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.features-item:hover {
+  border-color: var(--iron);
+  box-shadow: var(--bs-lg);
+}
+.features-item:hover .arrow-right-icon {
+  filter: initial;
+}
+.features-item .arrow-right-icon {
+  margin-left: 5.5rem;
+  font-size: 1.4rem;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+  color: var(--science-blue);
+}
+
+.features-item-title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.features-item-description {
+  color: var(--dark-blue);
+  font-size: 1.4rem;
+}
+.features-item-description a {
+  padding-bottom: 0.01rem;
+  border-bottom: 1px solid rgba(16, 116, 231, 0.5);
+  transition: all 0.3s;
+}
+.features-item-description a:hover {
+  border-bottom: 1px solid var(--science-blue);
+}
+
+/* End Features */
 
 /*# sourceMappingURL=main.css.map */
