@@ -4,7 +4,6 @@
 var features_img=document.querySelectorAll('.features-item-img img');
 var features=document.querySelectorAll('.features-item');
 
-
 function resetActive(){
     features_img.forEach(item=>{
         item.classList.remove("active");

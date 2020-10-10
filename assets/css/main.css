@@ -114,13 +114,13 @@ section {
   margin-top: 2.5rem;
   border: 1px solid rgba(16, 116, 231, 0.5);
 }
+.btn-outline-blue .fa-long-arrow-alt-right {
+  font-size: 0.9rem;
+  width: 1rem;
+  transition: all 0.3s ease-in-out;
+}
 .btn-outline-blue:hover .fa-long-arrow-alt-right {
   padding-left: 0.5rem;
-}
-.btn-outline-blue i {
-  font-size: 0.9rem;
-  width: 2rem;
-  transition: all 0.3s ease-in-out;
 }
 .btn-outline-blue:hover {
   color: var(--science-blue);
@@ -761,5 +761,94 @@ main {
 }
 
 /* End Features */
+/* Leading Companies */
+.leading-companies .section-title {
+  color: var(--gray-2);
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.companines {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 2.5rem;
+  justify-content: center;
+}
+
+.companies-item {
+  flex-basis: 22.5%;
+  min-width: 25rem;
+  background-color: var(--white);
+  box-shadow: 0 2px 4px rgba(27, 31, 35, 0.15);
+  border-radius: 0.6rem;
+  padding: 1.6rem;
+}
+.companies-item .fa-long-arrow-alt-right {
+  font-size: 0.9rem;
+  width: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.companies-item:hover .fa-long-arrow-alt-right {
+  padding-left: 0.5rem;
+}
+.companies-item:hover .company-link-effect {
+  opacity: 1;
+  transform: translate3d(0.5rem, -0.5rem, 0) scale(0.95);
+}
+
+.company-header {
+  position: relative;
+}
+.company-header img {
+  border-radius: 0.6rem;
+}
+
+.company-link-effect {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: var(--azure-radiance);
+  border-radius: 0.6rem;
+  padding: 1rem 2rem;
+  transition: opacity 0.4s, transform 0.4s;
+  opacity: 0;
+}
+
+.square {
+  border: 2px solid var(--dark-blue);
+  padding: 0.45rem 0.9rem;
+}
+.square i {
+  font-size: 1.2rem;
+  transform: rotate(45deg);
+  color: var(--white);
+}
+
+.company-body {
+  margin: 1rem 0 1.5rem;
+}
+.company-body h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+.company-body span {
+  color: var(--gray-2);
+  font-size: 1.2rem;
+}
+
+.company-footer {
+  border-top: 1px solid var(--athens-gray-3);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--azure-radiance);
+  font-size: 1.4rem;
+}
+
+/* End Leading Companies */
 
 /*# sourceMappingURL=main.css.map */
