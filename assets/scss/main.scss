@@ -1,3 +1,27 @@
+/* Mixins */
+@mixin arrowAnimation{
+  .fa-long-arrow-alt-right{
+    font-size: .9rem;
+    width: 1rem;
+    transition: all .3s ease-in-out;
+  }
+  &:hover .fa-long-arrow-alt-right{
+    padding-left: .5rem;
+  }
+}
+@mixin cardAnimation{
+  position: absolute;
+  content: '';
+  background: url("https://github.githubassets.com/images/modules/site/patterns/dots-small.svg");
+  width: 18rem;
+  height: 18rem;
+  transition: opacity .4s,transform .4s;
+  opacity:0;
+  z-index: -1;
+}
+/* End Mixins */
+
+
 /* Global*/
 *,*:before,*:after{
   margin: 0;
@@ -24,17 +48,18 @@
   --endeavour:#0065a9;
   --lochmara:#007acc;
   --egg-blue:#00cfc8;
-  --Daintree: #022531;
+  --daintree: #022531;
   --sapphire:#040d21;
   --british-racing-green:#041027;
   --black-pearl:#051127;
   --cinder:#1e2327;
   --dodger-blue:#1f9cf0;
   --shark:#23292f;
+  --shark-2:#1b1f23;
   --mine-shaft:#303030;
-  --Emerald:#34d058;
-  --Chambray:#364e98;
-  --Fiord:#424d65;
+  --emerald:#34d058;
+  --chambray:#364e98;
+  --fiord:#424d65;
   --river-bed:#465061;
   --grape:#4a154b;
   --fern:#5fb57d;
@@ -100,27 +125,6 @@ section {
 .ff-mono{
   font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace!important;
 }
-@mixin arrowAnimation{
-  .fa-long-arrow-alt-right{
-    font-size: .9rem;
-    width: 1rem;
-    transition: all .3s ease-in-out;
-  }
-  &:hover .fa-long-arrow-alt-right{
-    padding-left: .5rem;
-  }
-}
-@mixin cardAnimation{
-  position: absolute;
-  content: '';
-  background: url("https://github.githubassets.com/images/modules/site/patterns/dots-small.svg");
-  width: 18rem;
-  height: 18rem;
-  transition: opacity .4s,transform .4s;
-  opacity:0;
-  z-index: -1;
-}
-
 .btn-outline-blue{
   border-radius: .6rem;
   transition: .2s;
@@ -135,7 +139,28 @@ section {
     border-color:var(--azure-radiance);
   }
 }
+.section-head{
+  max-width: 70rem;
+  margin:0 auto;
+  text-align: center;
+}
+.sm-description{
+  color: var(--gray-2);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.section-title{
+  color: var(--dark-blue);
+  font-size: 4.8rem;
+  font-weight: 500;
+}
+.section-description{
+  color: var(--gray-2);
+  font-size: 2rem;
+  font-weight: 400;
+}
 /* End Global */
+
 
 
 
@@ -205,7 +230,7 @@ nav{
   width: 30rem;
   border-radius: .6rem;
   padding:2rem 2.5rem;
-  box-shadow: 0px 0px 1px 1px #1B1F23;
+  box-shadow: 0px 0px 1px 1px var(--shark-2);
 }
 .dropdown-body{
   border-bottom: 1px solid var(--athens-gray);
@@ -406,7 +431,7 @@ nav{
   background-color: var(--athens-gray-2);
   padding: 2rem;
   border-radius: .6rem;
-  box-shadow: 0px 0px 1px 1px #1B1F23;
+  box-shadow: 0px 0px 1px 1px var(--shark-2);
 }
 .form-group{
   margin-bottom: 1.6rem;
@@ -645,27 +670,11 @@ background-color: var(--congress-blue);
 
 /* Github Team Signup */
 .teams-content{
-  max-width: 80rem;
   padding: 0 2rem;
-  margin:0 auto;
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
-.section-sm-description{
-  color: var(--gray-2);
-  font-size: 1.6rem;
-}
-.section-title{
-  color: var(--dark-blue);
-  font-size: 4.8rem;
-  font-weight: 500;
-}
-.section-description{
-  color: var(--gray-2);
-  font-size: 2rem;
-  font-weight: 400;
-}
+
 .btn-teams-sign-up{
 font-size: 1.6rem;
   display: inline-block;
@@ -830,13 +839,8 @@ font-size: 1.6rem;
   padding-top:10rem;
 }
 .administration-content{
-  text-align: center;
   max-width: 100rem;
   margin: 0 auto;
-}
-.administration-header{
-  max-width: 80rem;
-  margin:0 auto;
 }
 .administration-body{
   margin:4rem 0;
@@ -918,9 +922,117 @@ font-size: 1.6rem;
     @include arrowAnimation();
     i{
       margin-left: .5rem ;
-      font-size: .9rem;
     }
   }
 }
 
 /* End Administration */
+
+
+
+
+/* Integrations */
+.integrations{
+  padding: 10rem 0;
+}
+.integrations-content{
+  text-align: center;
+}
+.integration-body{
+  margin: 5rem auto 10rem;
+  max-width: 85rem;
+}
+.integration-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-gap: 2.5rem;
+}
+.integration-item
+{
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9.6rem;
+  height: 9.6rem;
+  padding: 2rem;
+  border-radius: 50%;
+  position: relative;
+  transition:box-shadow .12s ease-in;
+  &:hover{
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,.2);
+    &:before{
+      opacity: 1;
+    }
+    &:after{
+      opacity: 1;
+    }
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    top:calc(100% + .4rem);
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    transition: opacity .1s;
+    background-color: var(--shark-2);
+    width: 1rem;
+    height: 1rem;
+    opacity: 0;
+  }
+  &:after{
+    position: absolute;
+    content: attr(aria-label);
+    top:calc(100% + .8rem);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity .1s;
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: .5rem 1rem;
+    background-color: var(--shark-2);
+    border-radius: .6rem;
+    white-space: nowrap;
+    opacity: 0;
+  }
+  &:nth-child(even){
+    margin-top: 5rem;
+  }
+}
+.slack{
+  background-color: var(--grape);
+}
+.zenhub{
+  background-color: var(--chambray);
+}
+.travis-ci{
+  background-color: var(--black-squeeze);
+}
+.atom{
+  background-color: var(--fern);
+}
+.circle-ci{
+  background-color: var(--daintree);
+}
+.google{
+  background-color: var(--concrete);
+}
+.code-climate{
+  background-color: var(--mine-shaft);
+}
+.integration-footer{
+  text-align: center;
+  p{
+    max-width: 30rem;
+    margin: 0 auto 1rem;
+    color: var(--gray-2);
+    font-size: 1.4rem;
+    display: block;
+  }
+  a{
+    font-size: 1.6rem;
+    @include arrowAnimation();
+  }
+
+}
+/* End Integrations */
