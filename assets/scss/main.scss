@@ -97,6 +97,9 @@ section {
 .ff-inter{
   font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
 }
+.ff-mono{
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace!important;
+}
 @mixin arrowAnimation{
   .fa-long-arrow-alt-right{
     font-size: .9rem;
@@ -106,6 +109,16 @@ section {
   &:hover .fa-long-arrow-alt-right{
     padding-left: .5rem;
   }
+}
+@mixin cardAnimation{
+  position: absolute;
+  content: '';
+  background: url("https://github.githubassets.com/images/modules/site/patterns/dots-small.svg");
+  width: 18rem;
+  height: 18rem;
+  transition: opacity .4s,transform .4s;
+  opacity:0;
+  z-index: -1;
 }
 
 .btn-outline-blue{
@@ -638,20 +651,20 @@ background-color: var(--congress-blue);
   display: flex;
   flex-direction: column;
   text-align: center;
-  .sm-description{
-    color: var(--gray-2);
-    font-size: 1.6rem;
-  }
-  .title{
-    color: var(--dark-blue);
-    font-size: 4.8rem;
-    font-weight: 500;
-  }
-  .description{
-    color: var(--gray-2);
-    font-size: 2rem;
-    font-weight: 400;
-  }
+}
+.section-sm-description{
+  color: var(--gray-2);
+  font-size: 1.6rem;
+}
+.section-title{
+  color: var(--dark-blue);
+  font-size: 4.8rem;
+  font-weight: 500;
+}
+.section-description{
+  color: var(--gray-2);
+  font-size: 2rem;
+  font-weight: 400;
 }
 .btn-teams-sign-up{
 font-size: 1.6rem;
@@ -810,3 +823,104 @@ font-size: 1.6rem;
 
 }
 /* End Leading Companies */
+
+
+/*  Administration */
+.administration{
+  padding-top:10rem;
+}
+.administration-content{
+  text-align: center;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.administration-header{
+  max-width: 80rem;
+  margin:0 auto;
+}
+.administration-body{
+  margin:4rem 0;
+  display: flex;
+  align-items: center;
+}
+.administration-item{
+  padding:2rem 5rem;
+  text-align: left;
+}
+.administration-title{
+  color: var(--dark-blue);
+  font-size: 2rem;
+  font-weight: 400;
+}
+.administration-desc{
+  margin-top: .5rem;
+  color: var(--gray-2);
+  font-size: 1.4rem;
+}
+
+.administration-card{
+  background-color: var(--white);
+  border-radius: .6rem;
+  border:1px solid var(--athens-gray-3);
+  padding:2.5rem 2rem;
+  display: flex;
+  max-width: 55rem;
+  margin:0 auto;
+  position: relative;
+  &:hover{
+    box-shadow: var(--bs-lg);
+    &:before{
+      opacity: 1;
+      transform: translate3d(-1.5rem, -1.5rem, 0);
+    }
+    &:after{
+      opacity: 1;
+      transform: translate3d(2rem,2rem, 0);
+    }
+  }
+  &:before{
+    @include cardAnimation();
+    top:0;
+    left: 0;
+  }
+  &:after{
+    @include cardAnimation();
+    bottom:0;
+    right: 0;
+  }
+}
+.administration-card-icon{
+  flex: 0 0 9rem;
+  i{
+    font-size: 4.5rem;
+    color:var(--gray-2)
+  }
+}
+.administration-card-desc{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  h3{
+    color: var(--dark-blue);
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: -.25rem;
+  }
+  p{
+    color: var(--gray-2);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  a{
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    @include arrowAnimation();
+    i{
+      margin-left: .5rem ;
+      font-size: .9rem;
+    }
+  }
+}
+
+/* End Administration */
