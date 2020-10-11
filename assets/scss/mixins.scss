@@ -1,0 +1,20 @@
+@mixin arrowAnimation{
+  .fa-long-arrow-alt-right{
+    font-size: .9rem;
+    width: 1rem;
+    transition: all .3s ease-in-out;
+  }
+  &:hover .fa-long-arrow-alt-right{
+    padding-left: .5rem;
+  }
+}
+@mixin cardAnimation{
+  position: absolute;
+  content: '';
+  background: url("https://github.githubassets.com/images/modules/site/patterns/dots-small.svg");
+  width: 18rem;
+  height: 18rem;
+  transition: opacity .4s,transform .4s;
+  opacity:0;
+  z-index: -1;
+}

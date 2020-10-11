@@ -1,6 +1,3 @@
-/* Mixins */
-/* End Mixins */
-/* Global*/
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -243,7 +240,6 @@ section {
   font-size: 1.4rem;
 }
 
-/* End Global */
 /*Header */
 header {
   height: 7.2rem;
