@@ -15,6 +15,7 @@
   --science-blue:#0366D6;
   --azure-radiance:#1074e7;
   --congress-blue:#044289;
+  --fuchsia-blue:#6f42c1;
   --gray:#808080;
   --gray-2:#586069;
   --outer-space:rgb(43,49,55);
@@ -56,6 +57,7 @@
   --coral:#ff7f50;
   --japanese-laurel:#008000;
   --web-orange:#ffa500;
+  --christine:#f66a0a;
   --fresh-eggplant:#800080;
   --dark-grayish-blue: rgb(43, 49, 55);
   --aqua-haze:#f6f8fa;
@@ -64,7 +66,9 @@
   --chateau-green:#2ebc4f;
   --eucalyptus:#28a745;
   --forest-green:#22863a;
+  --brown:#a04100;
   --bs-lg: 0 8px 24px rgba(149,157,165,.2);
+  --bs-xlg:0 12px 48px rgba(149,157,165,.3);
 }
 
 html {
@@ -794,7 +798,7 @@ main {
   position: relative;
 }
 
-.features-list {
+.features {
   flex: 7;
 }
 
@@ -1110,16 +1114,109 @@ main {
 }
 
 /* End Integrations */
+/* End Community */
 .community-body {
-  margin: 2.5rem 0;
+  margin: 3rem 0;
 }
 
 .community-footer {
-  text-align: center;
-}
-.community-footer .section-description {
-  max-width: 70rem;
+  max-width: 90rem;
   margin: 0 auto;
 }
+.community-footer .section-description {
+  text-align: center;
+  max-width: 70rem;
+  margin: 0 auto 5rem;
+}
+.community-footer .features {
+  flex: initial;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50%;
+  position: relative;
+}
+
+.statistic:hover .statistics-number {
+  transform: scale(1.05);
+}
+.statistic.repositories .statistics-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22.5rem;
+  height: 22.5rem;
+  background-color: var(--christine);
+}
+.statistic.developers .statistics-number {
+  position: absolute;
+  top: 3rem;
+  left: 25.5rem;
+  width: 17.5rem;
+  height: 17.5rem;
+  background-color: var(--science-blue);
+}
+.statistic.businesses .statistics-number {
+  position: absolute;
+  top: 21.5rem;
+  left: 16.5rem;
+  width: 14.5rem;
+  height: 14.5rem;
+  background-color: var(--fuchsia-blue);
+}
+.statistic.businesses .statistics-number .number {
+  font-size: 3.2rem;
+}
+.statistic .features-item {
+  max-width: 40rem;
+}
+
+.statistics-number {
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: transform 0.3s;
+  box-shadow: var(--bg-xlg);
+}
+.statistics-number:hover + .features-item {
+  border-color: var(--iron);
+  box-shadow: var(--bs-lg);
+}
+.statistics-number .number {
+  font-size: 4rem;
+  font-weight: 400;
+}
+.statistics-number .number sup {
+  font-size: 2.4rem;
+}
+.statistics-number .text {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.statictics-date {
+  padding-left: 2.4rem;
+  color: var(--pale-sky);
+  font-size: 1.2rem;
+}
+
+.sp-repositories {
+  color: var(--brown);
+}
+
+.sp-developers {
+  color: var(--science-blue);
+}
+
+.sp-businesses {
+  color: var(--fuchsia-blue);
+}
+
+/* End Community */
 
 /*# sourceMappingURL=main.css.map */
