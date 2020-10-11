@@ -814,7 +814,8 @@ font-size: 1.6rem;
 .features-item-description{
   color: var(--dark-blue);
   font-size: 1.4rem;
-  a{
+  .desc-link{
+    color: var(--science-blue);
     padding-bottom: .01rem;
     border-bottom: 1px solid rgba(16,116,231,.5);
     transition: all .3s;

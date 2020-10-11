@@ -850,12 +850,13 @@ main {
   color: var(--dark-blue);
   font-size: 1.4rem;
 }
-.features-item-description a {
+.features-item-description .desc-link {
+  color: var(--science-blue);
   padding-bottom: 0.01rem;
   border-bottom: 1px solid rgba(16, 116, 231, 0.5);
   transition: all 0.3s;
 }
-.features-item-description a:hover {
+.features-item-description .desc-link:hover {
   border-bottom: 1px solid var(--science-blue);
 }
 
