@@ -1144,3 +1144,41 @@ font-size: 1.6rem;
   color:var(--fuchsia-blue);
 }
 /* End Community */
+
+
+/* Signup  */
+.signup{
+  background-color: var(--dark-blue);
+  .footer-description{
+    text-align: center;
+    a{
+      color: var(--white);
+    }
+  }
+}
+.signup-title{
+  color: var(--white);
+  font-size: 3.2rem;
+  font-weight: 400;
+  max-width: 90rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.signup-form{
+  margin: 8rem 0 2rem;
+  display: flex;
+  grid-gap: 3rem;
+  & > *{
+    flex: 1;
+  }
+  label{
+    color: var(--white);
+  }
+  input{
+    background-color: var(--white);
+    &::placeholder{
+      color: inherit;
+    }
+  }
+}
+/* End Signup  */
