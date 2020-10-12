@@ -7,16 +7,18 @@ var navToggleBtn=header.querySelectorAll(".nav-toggle-btn");
 function closeNavItems(){
     nav_items.forEach(item=>{
         item.classList.remove('open');
-        console.log(item)
     })
 }
 
 nav_items.forEach(item=>{
-
     item.addEventListener('click',(e)=>{
-        closeNavItems();
-        e.currentTarget.classList.toggle('open');
-    })
+        if (e.currentTarget.classList.contains('open')){
+            e.currentTarget.classList.toggle('open');
+        }else{
+            closeNavItems();
+            e.currentTarget.classList.toggle('open');
+        }
+    });
 })
 
 navToggleBtn.forEach(btn=>{
@@ -40,8 +42,19 @@ function changeSearchText(){
         searchHint.classList.remove('open');
     }
 }
+function closeSearcHint(){
+    searchHint.classList.remove('open');
+}
+function openSearcHint(){
+    if (this.value.length!=0){
+        searchHint.classList.add('open');
+    }
+}
+
 searchInput.addEventListener('change',changeSearchText);
 searchInput.addEventListener('keyup',changeSearchText);
+searchInput.addEventListener('focusout',closeSearcHint);
+searchInput.addEventListener('focus',openSearcHint);
 
 
 

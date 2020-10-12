@@ -272,7 +272,6 @@ nav {
 .nav-menu {
   flex: 2 1 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -397,7 +396,7 @@ nav {
   content: "";
   top: 100%;
   left: 0;
-  width: 110%;
+  width: calc(100% + 3rem);
   height: 0.2rem;
   background-color: var(--athens-gray);
   z-index: 1;
@@ -433,7 +432,7 @@ nav {
   border: 1px solid var(--athens-gray);
   border-bottom-left-radius: 0.6rem;
   border-bottom-right-radius: 0.6rem;
-  width: 110%;
+  width: calc(100% + 3rem);
   height: inherit;
   z-index: 2;
   font-weight: 400;
@@ -505,6 +504,9 @@ nav {
   opacity: 0.75;
 }
 
+.nav-mobile {
+  display: none;
+}
 .nav-mobile a {
   font-size: 1.4rem;
 }
@@ -1412,7 +1414,12 @@ main {
     justify-content: space-between;
   }
 
+  .nav-mobile {
+    display: block;
+  }
+
   .nav-menu {
+    flex-direction: column;
     position: fixed;
     top: 0;
     right: 0;
@@ -1421,12 +1428,16 @@ main {
     overflow: auto;
     background-color: var(--white);
     align-items: initial;
+    box-shadow: 0 10px 50px rgba(27, 31, 35, 0.15);
     transform: translateX(50rem);
     transition: transform 0.1ms;
     z-index: 100;
   }
   .nav-menu.open {
     transform: translateX(0);
+  }
+  .nav-menu .btn-login, .nav-menu .btn-register {
+    color: var(--river-bed-2);
   }
 
   .menu-close-icon {
@@ -1479,15 +1490,18 @@ main {
   }
 
   .nav-form {
-    margin-top: 3rem;
+    flex: initial;
     flex-direction: column;
     grid-row-gap: 2rem;
     justify-content: initial;
-    padding: 0 1.6rem;
+    align-items: flex-start;
+    margin: 3rem 1.6rem;
+    padding-right: 0.1rem;
+    overflow: hidden;
   }
 
   .search-form {
-    width: 100%;
+    width: 95%;
     border: 1px solid var(--athens-gray);
   }
   .search-form:focus-within {
@@ -1497,11 +1511,17 @@ main {
     color: var(--dark-blue);
   }
   .search-form input::placeholder {
-    color: var(--dark-blue);
+    color: var(--gray-2);
   }
 
-  .nav-menu .btn-login, .nav-menu .btn-register {
-    color: var(--river-bed-2);
+  .search-hint {
+    width: calc(100% + 1.5rem);
+  }
+
+  .nav-btn-wrap {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0 1rem;
   }
 }
 /* End Media Queries  */

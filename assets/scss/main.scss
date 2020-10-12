@@ -31,7 +31,7 @@ nav{
 .nav-menu{
   flex: 2 1 auto;
   display: flex;
-  flex-direction: column;
+//  flex-direction: column;
   align-items: center;
 }
 .menu-close-icon{
@@ -145,7 +145,7 @@ nav{
       content: '';
       top:100%;
       left: 0;
-      width: 110%;
+      width:  calc(100% + 3rem);
       height: .2rem;
       background-color: var(--athens-gray);
       z-index: 1;
@@ -182,7 +182,7 @@ nav{
   border: 1px solid var(--athens-gray);
   border-bottom-left-radius: .6rem;
   border-bottom-right-radius:  .6rem;
-  width: 110%;
+  width: calc(100% + 3rem);
   height: inherit;
   z-index: 2;
   font-weight: 400;
@@ -251,6 +251,7 @@ nav{
   }
 }
 .nav-mobile{
+  display: none;
   a{
     font-size: 1.4rem;
   }
