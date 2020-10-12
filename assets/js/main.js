@@ -56,6 +56,17 @@ searchInput.addEventListener('keyup',changeSearchText);
 searchInput.addEventListener('focusout',closeSearcHint);
 searchInput.addEventListener('focus',openSearcHint);
 
+window.addEventListener('resize', function(event){
+    if (window.innerWidth>=1012){
+        header.classList.remove('bg-sapphire');
+    }else{
+        if (navMenu.classList.contains('open')){
+            header.classList.add('bg-sapphire');
+        }
+    }
+});
+
+
 
 
 
@@ -84,3 +95,6 @@ features.forEach(feature=>{
         resetActive();
     });
 })
+
+
+
