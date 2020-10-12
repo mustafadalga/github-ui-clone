@@ -922,7 +922,7 @@ main {
   transition: all 0.3s;
 }
 .features-item-description .desc-link:hover {
-  border-bottom: 1px solid var(--science-blue);
+  border-color: var(--science-blue);
 }
 
 /* End Features */
@@ -1583,6 +1583,28 @@ main {
   .btn-try-github-free {
     width: 100%;
   }
+
+  /* Features */
+  .features-content {
+    flex-direction: column;
+  }
+
+  .features-head-img {
+    flex: initial;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .features-head-img img {
+    width: 60%;
+  }
+
+  .features-item-img {
+    right: 0;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 768px) {
   main {
@@ -1676,6 +1698,25 @@ main {
 
   .enterprise-item:nth-child(2) p {
     margin: 0;
+  }
+
+  /* Features */
+  .features {
+    flex: initial;
+  }
+
+  .features-head-img img {
+    width: 80%;
+  }
+
+  .features-item {
+    border-radius: initial;
+    padding-left: initial;
+    padding-right: initial;
+    border: initial;
+  }
+  .features-item:hover {
+    box-shadow: initial;
   }
 }
 /* End Media Queries  */

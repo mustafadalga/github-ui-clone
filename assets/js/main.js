@@ -85,11 +85,16 @@ function getDataId(item){
 function changeImage(id){
     features_img[id].classList.add('active');
 }
+function checkWindowsSize(){
+    return window.innerWidth>=544 ? true : false;
+}
 
 features.forEach(feature=>{
     feature.addEventListener('mouseover',()=>{
-        resetActive();
-       changeImage(getDataId(feature));
+       if (checkWindowsSize()){
+           resetActive();
+           changeImage(getDataId(feature));
+       }
     });
     feature.addEventListener('mouseout',()=>{
         resetActive();

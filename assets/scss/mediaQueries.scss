@@ -157,6 +157,26 @@
   .btn-try-github-free{
     width: 100% ;
   }
+
+  /* Features */
+  .features-content{
+    flex-direction: column;
+  }
+  .features-head-img{
+    flex: initial;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 60%;
+    }
+  }
+  .features-item-img{
+    right: 0;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 768px) {
   main{
@@ -220,7 +240,10 @@
   .section-title{
     font-size: 4rem;
   }
-  //.github-teams-signup
+
+
+
+
 }
 @media screen and (max-width: 544px) {
 
@@ -248,5 +271,24 @@
     &:nth-child(2)  p{
         margin: 0;
       }
+  }
+
+  /* Features */
+  .features{
+    flex: initial;
+  }
+  .features-head-img{
+    img{
+      width: 80%;
+    }
+  }
+  .features-item{
+    border-radius: initial;
+    padding-left: initial;
+    padding-right: initial;
+    border: initial;
+    &:hover{
+      box-shadow: initial;
+    }
   }
 }
