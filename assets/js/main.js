@@ -1,3 +1,49 @@
+// Header Section
+var header=document.querySelector('header');
+var navMenu=header.querySelector('.nav-menu');
+var nav_items=navMenu.querySelectorAll('.nav-main-item');
+var navToggleBtn=header.querySelectorAll(".nav-toggle-btn");
+
+function closeNavItems(){
+    nav_items.forEach(item=>{
+        item.classList.remove('open');
+        console.log(item)
+    })
+}
+
+nav_items.forEach(item=>{
+
+    item.addEventListener('click',(e)=>{
+        closeNavItems();
+        e.currentTarget.classList.toggle('open');
+    })
+})
+
+navToggleBtn.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        navMenu.classList.toggle('open');
+        header.classList.toggle('bg-sapphire');
+    });
+})
+
+
+//Nav Search Form
+var searchForm=document.querySelector('.search-form');
+var searchInput=searchForm.querySelector('input[type="text"]');
+var searchHint=searchForm.querySelector('.search-hint');
+var searchText=searchHint.querySelector('.search-text');
+
+function changeSearchText(){
+   searchHint.classList.add('open');
+   searchText.textContent=this.value
+    if (this.value.trim().length==0){
+        searchHint.classList.remove('open');
+    }
+}
+searchInput.addEventListener('change',changeSearchText);
+searchInput.addEventListener('keyup',changeSearchText);
+
+
 
 
 // Features Section
@@ -7,7 +53,7 @@ var features=document.querySelectorAll('.features-item');
 function resetActive(){
     features_img.forEach(item=>{
         item.classList.remove("active");
-    })
+    });
 }
 function getDataId(item){
     return item.getAttribute('data-id');

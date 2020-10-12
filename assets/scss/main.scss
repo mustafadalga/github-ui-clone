@@ -1,6 +1,11 @@
+/* Mixins */
 @import "mixins";
-@import "global";
+/* End Mixins */
 
+
+/* Global Styles */
+@import "global";
+/* End Global Styles */
 
 /*Header */
 header{
@@ -19,6 +24,28 @@ nav{
   display: flex;
   align-items: center;
   padding: 0.8rem 0;
+}
+.bg-sapphire{
+  background-color: var(--sapphire);
+}
+.nav-menu{
+  flex: 2 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-close-icon{
+  background-color: var(--athens-gray-2);
+  border-bottom: 1px solid var(--athens-gray-3);
+  padding:2rem 2rem;
+  justify-content: flex-end;
+  width: 100%;
+  i{
+    color: var(--gray-2);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  display: none;
 }
 .nav-main-links{
   display: flex;
@@ -51,6 +78,9 @@ nav{
 .nav-main-link{
   color: var(--white);
   font-size: 1.6rem;
+  &:hover{
+    opacity: .75;
+  }
   i{
     font-size: 1.1rem;
     color: rgba(255,255,255,.5);
@@ -93,6 +123,9 @@ nav{
   color: var(--gray-2);
   font-size: 1.4rem;
   padding: .8rem 0;
+  &:hover{
+    color: var(--science-blue);
+  }
 }
 .search-form{
   width: 24rem;
@@ -160,12 +193,23 @@ nav{
     color: var(--white );
   }
   display: none;
+  &.open{
+    display: flex;
+  }
 }
 .search-text{
+  flex-basis: 60%;
+  flex: 1 1 0;
   font-size: 1.4rem;
-  color: var(--white)
+  color: var(--white);
+  text-align: left;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  padding: 0 1rem;
 }
 .all-github{
+  flex: 1 0 initial;
   background-color: var(--aqua-haze);
   border-radius: .6rem;
   padding:.3rem .5rem;
@@ -204,6 +248,17 @@ nav{
   transition: opacity .4s;
   &:hover{
     opacity: .75;
+  }
+}
+.nav-mobile{
+  a{
+    font-size: 1.4rem;
+  }
+  i{
+    color: var(--white);
+    font-size: 2rem;
+    margin-left: 2.5rem;
+    cursor: pointer;
   }
 }
 /* End Header */
@@ -1026,5 +1081,6 @@ font-size: 1.6rem;
 }
 /* End Footer  */
 
-
+/* Media Queries  */
 @import "mediaQueries";
+/* End Media Queries  */

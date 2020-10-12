@@ -1,3 +1,6 @@
+/* Mixins */
+/* End Mixins */
+/* Global Styles */
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -18,7 +21,7 @@
   --outer-space:rgb(43,49,55);
   --athens-gray:rgb(225, 228, 232);
   --athens-gray-2:#FAFBFC;
-  --athens-gray-3:#e1e4e8 ;
+  --athens-gray-3:#e1e4e8;
   --pink:#ffc0cb;
   --red:#ff0000;
   --yellow:#ffff00;
@@ -38,6 +41,7 @@
   --chambray:#364e98;
   --fiord:#424d65;
   --river-bed:#465061;
+  --river-bed-2:#444d56;
   --grape:#4a154b;
   --fern:#5fb57d;
   --malibu:#79b8ff;
@@ -240,6 +244,7 @@ section {
   font-size: 1.4rem;
 }
 
+/* End Global Styles */
 /*Header */
 header {
   height: 7.2rem;
@@ -258,6 +263,31 @@ nav {
   display: flex;
   align-items: center;
   padding: 0.8rem 0;
+}
+
+.bg-sapphire {
+  background-color: var(--sapphire);
+}
+
+.nav-menu {
+  flex: 2 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-close-icon {
+  background-color: var(--athens-gray-2);
+  border-bottom: 1px solid var(--athens-gray-3);
+  padding: 2rem 2rem;
+  justify-content: flex-end;
+  width: 100%;
+  display: none;
+}
+.menu-close-icon i {
+  color: var(--gray-2);
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .nav-main-links {
@@ -296,6 +326,9 @@ nav {
 .nav-main-link {
   color: var(--white);
   font-size: 1.6rem;
+}
+.nav-main-link:hover {
+  opacity: 0.75;
 }
 .nav-main-link i {
   font-size: 1.1rem;
@@ -340,6 +373,9 @@ nav {
   color: var(--gray-2);
   font-size: 1.4rem;
   padding: 0.8rem 0;
+}
+.nav-dropdown-link:hover {
+  color: var(--science-blue);
 }
 
 .search-form {
@@ -409,13 +445,24 @@ nav {
   font-size: 1.6rem;
   color: var(--white);
 }
+.search-hint.open {
+  display: flex;
+}
 
 .search-text {
+  flex-basis: 60%;
+  flex: 1 1 0;
   font-size: 1.4rem;
   color: var(--white);
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 1rem;
 }
 
 .all-github {
+  flex: 1 0 initial;
   background-color: var(--aqua-haze);
   border-radius: 0.6rem;
   padding: 0.3rem 0.5rem;
@@ -456,6 +503,16 @@ nav {
 }
 .btn-register:hover {
   opacity: 0.75;
+}
+
+.nav-mobile a {
+  font-size: 1.4rem;
+}
+.nav-mobile i {
+  color: var(--white);
+  font-size: 2rem;
+  margin-left: 2.5rem;
+  cursor: pointer;
 }
 
 /* End Header */
@@ -1340,5 +1397,113 @@ main {
 }
 
 /* End Footer  */
+/* Media Queries  */
+@media screen and (max-width: 1012px) {
+  header {
+    height: 5.2rem;
+    padding: initial;
+  }
+
+  header .container {
+    padding: 0 4rem;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30rem;
+    height: 100vh;
+    overflow: auto;
+    background-color: var(--white);
+    align-items: initial;
+    transform: translateX(50rem);
+    transition: transform 0.1ms;
+    z-index: 100;
+  }
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+
+  .menu-close-icon {
+    display: flex;
+  }
+
+  .nav-main-menu {
+    flex: initial;
+  }
+
+  .nav-main-links {
+    flex-direction: column;
+    padding: 0 1.6rem;
+  }
+
+  .nav-main-item {
+    padding: 1.6rem 0;
+    border-bottom: 1px solid var(--athens-gray-3);
+  }
+  .nav-main-item.open .nav-dropdown-menu {
+    display: block;
+  }
+
+  .nav-main-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--river-bed-2);
+  }
+  .nav-main-link i {
+    color: inherit;
+    font-size: 1.5rem;
+  }
+
+  .nav-dropdown-menu {
+    visibility: initial;
+    opacity: initial;
+    transition: initial;
+    background: initial;
+    position: initial;
+    width: initial;
+    border-radius: initial;
+    padding: 2rem 0;
+    box-shadow: initial;
+    display: none;
+  }
+
+  .dropdown-body {
+    border-bottom: initial;
+  }
+
+  .nav-form {
+    margin-top: 3rem;
+    flex-direction: column;
+    grid-row-gap: 2rem;
+    justify-content: initial;
+    padding: 0 1.6rem;
+  }
+
+  .search-form {
+    width: 100%;
+    border: 1px solid var(--athens-gray);
+  }
+  .search-form:focus-within {
+    background-color: var(--athens-gray-2);
+  }
+  .search-form input {
+    color: var(--dark-blue);
+  }
+  .search-form input::placeholder {
+    color: var(--dark-blue);
+  }
+
+  .nav-menu .btn-login, .nav-menu .btn-register {
+    color: var(--river-bed-2);
+  }
+}
+/* End Media Queries  */
 
 /*# sourceMappingURL=main.css.map */
