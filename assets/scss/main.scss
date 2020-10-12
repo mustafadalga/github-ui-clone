@@ -273,12 +273,15 @@ nav{
   background-size: cover;
   background-repeat: no-repeat;
   background-color:var(--outer-space);
-  height: calc(100vh - 3.6rem);
+  /*
+  min-height: 100vh;
+  height: auto;
   width: 100%;
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
+  */
   .container {
     height: 100%;
   }
@@ -292,10 +295,8 @@ nav{
 }
 .hero-text-wrap{
   flex-basis: 55%;
-  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 .hero-text{
   width: 75%;
@@ -310,7 +311,7 @@ nav{
 }
 .hero-description{
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
   color: rgba(255,255,255,.6);
   a{
@@ -318,9 +319,10 @@ nav{
   }
 }
 .hero-form{
-  flex-basis: 40%;
+  flex-basis: 45%;
 }
 .sign-up-form{
+  max-width: 43rem;
   background-color: var(--athens-gray-2);
   padding: 2rem;
   border-radius: .6rem;
@@ -382,7 +384,7 @@ nav{
 /* End Hero*/
 
 main{
-  margin-top:100vh;
+  margin-top:3rem;
 }
 
 /* Github Enterprise */

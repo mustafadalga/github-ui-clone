@@ -106,4 +106,43 @@
     text-align: center;
     margin: .5rem 0 1rem;
   }
+
+  .hero-text{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-content{
+    flex-direction: column;
+  }
+  .hero-text-wrap{
+    flex-basis: initial;
+    text-align: center;
+  }
+  .hero-text{
+    width: initial;
+  }
+  .hero-title{
+    font-size: 4.8rem;
+  }
+  .hero-form{
+    margin-top: 3rem;
+    flex-basis: initial;
+    display: flex;
+    justify-content: center;
+  }
+  .enterprise-head-img{
+    display: none;
+  }
+}
+@media screen and (max-width: 544px) {
+  .container, header .container{
+    padding: 0 2rem;
+  }
+  .hero-form{
+    display: none;
+  }
+  .hero-title{
+    text-align:left;
+  }
 }

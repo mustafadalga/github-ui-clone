@@ -526,12 +526,15 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--outer-space);
-  height: calc(100vh - 3.6rem);
+  /*
+  min-height: 100vh;
+  height: auto;
   width: 100%;
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
+  */
 }
 .hero .container {
   height: 100%;
@@ -547,10 +550,8 @@ nav {
 
 .hero-text-wrap {
   flex-basis: 55%;
-  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .hero-text {
@@ -568,7 +569,7 @@ nav {
 
 .hero-description {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -577,10 +578,11 @@ nav {
 }
 
 .hero-form {
-  flex-basis: 40%;
+  flex-basis: 45%;
 }
 
 .sign-up-form {
+  max-width: 43rem;
   background-color: var(--athens-gray-2);
   padding: 2rem;
   border-radius: 0.6rem;
@@ -644,7 +646,7 @@ nav {
 
 /* End Hero*/
 main {
-  margin-top: 100vh;
+  margin-top: 3rem;
 }
 
 /* Github Enterprise */
@@ -1522,6 +1524,52 @@ main {
     width: 100%;
     text-align: center;
     margin: 0.5rem 0 1rem;
+  }
+
+  .hero-text {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero-text-wrap {
+    flex-basis: initial;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: initial;
+  }
+
+  .hero-title {
+    font-size: 4.8rem;
+  }
+
+  .hero-form {
+    margin-top: 3rem;
+    flex-basis: initial;
+    display: flex;
+    justify-content: center;
+  }
+
+  .enterprise-head-img {
+    display: none;
+  }
+}
+@media screen and (max-width: 544px) {
+  .container, header .container {
+    padding: 0 2rem;
+  }
+
+  .hero-form {
+    display: none;
+  }
+
+  .hero-title {
+    text-align: left;
   }
 }
 /* End Media Queries  */
