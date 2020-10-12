@@ -120,7 +120,7 @@ section {
 .btn-outline-blue {
   border-radius: 0.6rem;
   transition: 0.2s;
-  padding: 1.6rem 2.4rem;
+  padding: 2rem 3.2rem;
   font-size: 1.4rem;
   font-weight: 500;
   margin-top: 2.5rem;
@@ -1645,6 +1645,11 @@ main {
 
   .organization-item {
     padding: 1rem 3rem;
+  }
+
+  /* Github Team Signup */
+  .section-title {
+    font-size: 4rem;
   }
 }
 @media screen and (max-width: 544px) {
