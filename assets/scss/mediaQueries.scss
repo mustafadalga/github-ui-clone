@@ -1,4 +1,5 @@
 @media screen and (max-width: 1012px) {
+  /* Header */
   header{
     height: 5.2rem;
     padding: initial;
@@ -107,11 +108,41 @@
     margin: .5rem 0 1rem;
   }
 
+  /* Hero */
+
   .hero-text{
     width: 90%;
   }
+
+  /* Github Enterprise */
+  .enterprise-content{
+    flex-direction: column;
+  }
+  .enterprise-title{
+    flex-basis: initial;
+    padding: initial;
+    text-align: center;
+  }
+  .enterprise-items{
+    flex-basis: initial;
+    margin-top: 2.5rem;
+    width: 100%;
+    text-align: center;
+    align-items: flex-end;
+  }
+  .enterprise-item{
+    &:nth-child(2){
+      p{
+        margin-bottom: 2rem;
+      }
+    }
+  }
 }
 @media screen and (max-width: 768px) {
+  main{
+    margin: 0;
+  }
+  /* Hero */
   .hero-content{
     flex-direction: column;
   }
@@ -131,18 +162,46 @@
     display: flex;
     justify-content: center;
   }
+
+
+  /* Github Enterprise */
   .enterprise-head-img{
     display: none;
   }
+  .enterprise-title{
+    h2{
+      font-size: 2.6rem;
+    }
+    p{
+      font-size: 1.8rem;
+    }
+  }
 }
 @media screen and (max-width: 544px) {
+
+  /* Header */
   .container, header .container{
     padding: 0 2rem;
   }
+
+  /* Hero */
   .hero-form{
     display: none;
   }
   .hero-title{
     text-align:left;
+  }
+
+
+  /* Github Enterprise */
+  .enterprise-items{
+    flex-direction: column;
+    align-items: center;
+    grid-row-gap: 2.5rem;
+  }
+  .enterprise-item{
+    &:nth-child(2)  p{
+        margin: 0;
+      }
   }
 }
