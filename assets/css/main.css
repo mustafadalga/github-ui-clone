@@ -1560,6 +1560,27 @@ main {
   .enterprise-item:nth-child(2) p {
     margin-bottom: 2rem;
   }
+
+  /* Github For Teams */
+  .for-teams-content {
+    flex-direction: column;
+  }
+  .for-teams-content .warning {
+    flex: initial;
+    width: 4.5rem;
+  }
+  .for-teams-content .description {
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .try-github-free {
+    flex-basis: initial;
+  }
+
+  .btn-try-github-free {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   main {
@@ -1601,6 +1622,14 @@ main {
   }
   .enterprise-title p {
     font-size: 1.8rem;
+  }
+
+  /* Github For Teams */
+  .for-teams-content {
+    padding: 2.5rem;
+  }
+  .for-teams-content .warning {
+    padding: 0;
   }
 }
 @media screen and (max-width: 544px) {

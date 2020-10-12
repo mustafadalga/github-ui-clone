@@ -137,6 +137,26 @@
       }
     }
   }
+
+
+  /* Github For Teams */
+  .for-teams-content{
+    flex-direction: column;
+    .warning{
+      flex:initial;
+      width: 4.5rem;
+    }
+    .description{
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  .try-github-free{
+    flex-basis: initial;
+  }
+  .btn-try-github-free{
+    width: 100% ;
+  }
 }
 @media screen and (max-width: 768px) {
   main{
@@ -174,6 +194,14 @@
     }
     p{
       font-size: 1.8rem;
+    }
+  }
+
+  /* Github For Teams */
+  .for-teams-content{
+    padding: 2.5rem;
+    .warning{
+      padding: 0;
     }
   }
 }
