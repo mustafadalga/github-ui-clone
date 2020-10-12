@@ -204,6 +204,17 @@
       padding: 0;
     }
   }
+
+  /* Organizations */
+  .organizations-title{
+    font-size: 1.8rem;
+  }
+  .organization-logo{
+    max-height: 2rem;
+  }
+  .organization-item{
+    padding: 1rem 3rem;
+  }
 }
 @media screen and (max-width: 544px) {
 
