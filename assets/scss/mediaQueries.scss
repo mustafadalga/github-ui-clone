@@ -367,11 +367,6 @@
   .hero-form{
     display: none;
   }
-  .hero-title{
-    text-align:left;
-  }
-
-
   /* Github Enterprise */
   .enterprise-items{
     flex-direction: column;
@@ -442,6 +437,8 @@
     }
     .another-links{
       order: 2;
+      flex-wrap: wrap;
+      grid-row-gap: .5rem;
     }
   }
   .social-media{

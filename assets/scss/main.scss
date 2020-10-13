@@ -743,11 +743,9 @@ font-size: 1.6rem;
   }
   a{
     font-size: 1.6rem;
-    display: flex;
-    align-items: center;
     @include arrowAnimation();
     i{
-      margin-left: .5rem ;
+      margin-left: .1rem ;
     }
   }
 }

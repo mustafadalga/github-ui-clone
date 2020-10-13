@@ -1034,8 +1034,6 @@ main {
 }
 .administration-card-desc a {
   font-size: 1.6rem;
-  display: flex;
-  align-items: center;
 }
 .administration-card-desc a .fa-long-arrow-alt-right {
   font-size: 0.9rem;
@@ -1046,7 +1044,7 @@ main {
   padding-left: 0.5rem;
 }
 .administration-card-desc a i {
-  margin-left: 0.5rem;
+  margin-left: 0.1rem;
 }
 
 /* End Administration */
@@ -1790,10 +1788,6 @@ main {
     display: none;
   }
 
-  .hero-title {
-    text-align: left;
-  }
-
   /* Github Enterprise */
   .enterprise-items {
     flex-direction: column;
@@ -1862,6 +1856,8 @@ main {
   }
   .footer-bottom .another-links {
     order: 2;
+    flex-wrap: wrap;
+    grid-row-gap: 0.5rem;
   }
 
   .social-media {
@@ -1870,3 +1866,5 @@ main {
   }
 }
 /* End Media Queries  */
+
+/*# sourceMappingURL=main.css.map */
