@@ -928,9 +928,6 @@ main {
 
 /* End Features */
 /* Leading Companies */
-.leading-companies {
-  background-color: red;
-}
 .leading-companies .section-title {
   color: var(--gray-2);
   font-size: 2rem;
@@ -940,10 +937,6 @@ main {
 }
 .leading-companies img {
   min-height: 20rem;
-}
-
-.cards {
-  background-color: yellow;
 }
 
 /* End Leading Companies */
@@ -1702,6 +1695,23 @@ main {
     min-width: 21.5rem;
     max-width: 50%;
   }
+
+  /*  Administration */
+  .administration-body {
+    flex-direction: column;
+  }
+
+  .administration-body-img {
+    order: 1;
+  }
+
+  .administration-items {
+    order: 2;
+  }
+
+  .administration-card {
+    max-width: initial;
+  }
 }
 @media screen and (max-width: 544px) {
   /* Header */
@@ -1751,6 +1761,11 @@ main {
   .card {
     min-width: 30rem;
     max-width: 100%;
+  }
+
+  /*  Administration */
+  .administration-item {
+    padding: 2rem 0;
   }
 }
 /* End Media Queries  */
