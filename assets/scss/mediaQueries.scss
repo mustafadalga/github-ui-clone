@@ -180,6 +180,13 @@
   .card{
    min-width:25rem;
   }
+
+  /* Integrations */
+  .integration-item{
+    &:nth-child(even){
+      margin: 0;
+    }
+  }
 }
 @media screen and (max-width: 900px) {
   .card{
@@ -270,6 +277,16 @@
   .administration-card{
     max-width: initial;
   }
+
+  /* Integrations */
+  .integration-footer{
+    p{
+      max-width: 40rem;
+    }
+    a{
+      font-size: 1.45rem;
+    }
+  }
 }
 @media screen and (max-width: 544px) {
 
@@ -325,5 +342,23 @@
   /*  Administration */
   .administration-item{
     padding: 2rem 0;
+  }
+
+  /* Integrations */
+  .integration-list{
+    grid-gap: 3.5rem;
+  }
+  .integration-item{
+   &:last-child{
+     display: none;
+   }
+  }
+  .integration-footer{
+    p{
+      max-width: initial;
+    }
+    a{
+      font-size: 1.4rem;
+    }
   }
 }
