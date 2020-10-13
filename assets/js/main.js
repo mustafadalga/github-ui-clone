@@ -42,7 +42,7 @@ function changeSearchText(){
         searchHint.classList.remove('open');
     }
 }
-function closeSearcHint(){
+function closeSearchHint(){
     searchHint.classList.remove('open');
 }
 function openSearcHint(){
@@ -53,7 +53,7 @@ function openSearcHint(){
 
 searchInput.addEventListener('change',changeSearchText);
 searchInput.addEventListener('keyup',changeSearchText);
-searchInput.addEventListener('focusout',closeSearcHint);
+searchInput.addEventListener('focusout',closeSearchHint);
 searchInput.addEventListener('focus',openSearcHint);
 
 window.addEventListener('resize', function(event){
