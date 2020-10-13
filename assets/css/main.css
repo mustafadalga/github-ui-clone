@@ -1634,6 +1634,16 @@ main {
     top: 22rem;
     left: 10rem;
   }
+
+  /* Signup Section */
+  .signup {
+    padding: 5rem 0 10rem;
+  }
+
+  .signup-form {
+    flex-direction: column;
+    grid-gap: 1rem;
+  }
 }
 @media screen and (max-width: 900px) {
   .card {
@@ -1762,6 +1772,11 @@ main {
   .statictics-date {
     padding: 0;
     margin-top: 3rem;
+  }
+
+  /* Signup Section */
+  .signup-title {
+    font-size: 2.6rem;
   }
 }
 @media screen and (max-width: 544px) {
