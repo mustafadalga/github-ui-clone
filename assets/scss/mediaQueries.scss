@@ -214,6 +214,12 @@
     flex-direction: column;
     grid-gap: 1rem;
   }
+
+
+  /* Footer */
+  .footer-body{
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 900px) {
   .card{
@@ -343,6 +349,11 @@
     font-size: 2.6rem;
   }
 
+
+  /* Footer */
+  .footer-col{
+    padding-right: 1rem;
+  }
 }
 @media screen and (max-width: 544px) {
 
@@ -416,5 +427,24 @@
     a{
       font-size: 1.4rem;
     }
+  }
+
+  /* Footer */
+  .footer-col{
+    flex-basis: 50%;
+    padding-right: 0;
+  }
+  .footer-bottom{
+    .container{
+      flex-direction: column;
+      grid-row-gap: 1.5rem;
+    }
+    .another-links{
+      order: 2;
+    }
+  }
+  .social-media{
+    justify-content: flex-start;
+    order: 1;
   }
 }
