@@ -1618,6 +1618,22 @@ main {
   .integration-item:nth-child(even) {
     margin: 0;
   }
+
+  /* Community */
+  .community-footer {
+    width: calc(100% + 2rem);
+    max-width: initial;
+  }
+
+  .statistic.developers .statistics-number {
+    top: 10rem;
+    left: 18.5rem;
+  }
+
+  .statistic.businesses .statistics-number {
+    top: 22rem;
+    left: 10rem;
+  }
 }
 @media screen and (max-width: 900px) {
   .card {
@@ -1724,6 +1740,28 @@ main {
   }
   .integration-footer a {
     font-size: 1.45rem;
+  }
+
+  /* Community */
+  .statistics {
+    padding-left: 0;
+  }
+
+  .statistic.repositories .statistics-number, .statistic.developers .statistics-number, .statistic.businesses .statistics-number {
+    position: initial;
+    margin: 1.5rem auto;
+  }
+  .statistic.repositories .features-item, .statistic.developers .features-item, .statistic.businesses .features-item {
+    max-width: initial;
+  }
+
+  .community-footer {
+    width: initial;
+  }
+
+  .statictics-date {
+    padding: 0;
+    margin-top: 3rem;
   }
 }
 @media screen and (max-width: 544px) {
