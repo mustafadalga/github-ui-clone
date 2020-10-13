@@ -146,8 +146,9 @@ section {
   justify-content: center;
 }
 .card{
-  flex-basis: 22.5%;
-  min-width: 25rem;
+  flex: 1;
+  min-width: 20rem;
+  max-width: 25%;
   background-color: var(--white);
   box-shadow: 0 2px 4px rgba(27,31,35,.15);
   border-radius: .6rem;

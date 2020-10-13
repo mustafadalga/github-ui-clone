@@ -177,7 +177,17 @@
     display: flex;
     justify-content: center;
   }
+  .card{
+   min-width:25rem;
+  }
 }
+@media screen and (max-width: 900px) {
+  .card{
+    min-width:20rem;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   main{
     margin: 0;
@@ -202,7 +212,6 @@
     display: flex;
     justify-content: center;
   }
-
 
   /* Github Enterprise */
   .enterprise-head-img{
@@ -241,9 +250,13 @@
     font-size: 4rem;
   }
 
-
-
-
+  .cards{
+    grid-gap: 1.5rem;
+  }
+  .card{
+    min-width: 21.5rem;
+    max-width: 50%;
+  }
 }
 @media screen and (max-width: 544px) {
 
@@ -290,5 +303,10 @@
     &:hover{
       box-shadow: initial;
     }
+  }
+
+  .card{
+    min-width: 30rem;
+    max-width: 100%;
   }
 }

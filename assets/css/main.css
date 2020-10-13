@@ -171,8 +171,9 @@ section {
 }
 
 .card {
-  flex-basis: 22.5%;
-  min-width: 25rem;
+  flex: 1;
+  min-width: 20rem;
+  max-width: 25%;
   background-color: var(--white);
   box-shadow: 0 2px 4px rgba(27, 31, 35, 0.15);
   border-radius: 0.6rem;
@@ -927,12 +928,22 @@ main {
 
 /* End Features */
 /* Leading Companies */
+.leading-companies {
+  background-color: red;
+}
 .leading-companies .section-title {
   color: var(--gray-2);
   font-size: 2rem;
   font-weight: 400;
   text-align: center;
   margin-bottom: 1.5rem;
+}
+.leading-companies img {
+  min-height: 20rem;
+}
+
+.cards {
+  background-color: yellow;
 }
 
 /* End Leading Companies */
@@ -1605,6 +1616,15 @@ main {
     display: flex;
     justify-content: center;
   }
+
+  .card {
+    min-width: 25rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .card {
+    min-width: 20rem;
+  }
 }
 @media screen and (max-width: 768px) {
   main {
@@ -1673,6 +1693,15 @@ main {
   .section-title {
     font-size: 4rem;
   }
+
+  .cards {
+    grid-gap: 1.5rem;
+  }
+
+  .card {
+    min-width: 21.5rem;
+    max-width: 50%;
+  }
 }
 @media screen and (max-width: 544px) {
   /* Header */
@@ -1717,6 +1746,11 @@ main {
   }
   .features-item:hover {
     box-shadow: initial;
+  }
+
+  .card {
+    min-width: 30rem;
+    max-width: 100%;
   }
 }
 /* End Media Queries  */
