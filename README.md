@@ -2,8 +2,6 @@
 
 ### Demo
 
-
-* [Netlify](https://github-landing-page.netlify.app/)
 * [Codepen](https://codepen.io/mustafadalga/full/xxOwJyG) 
 
 
