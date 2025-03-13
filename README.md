@@ -2,7 +2,7 @@
 
 ### Demo
 
-* [Github Pages](https://mustafadalga.github.io/github-ui-clone/)
+
 * [Netlify](https://github-landing-page.netlify.app/)
 * [Codepen](https://codepen.io/mustafadalga/full/xxOwJyG) 
 
